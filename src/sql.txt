@@ -1,0 +1,35 @@
+\c testdb
+
+CREATE TABLE weather_info (
+    weather_info_id SERIAL PRIMARY KEY,
+    weather_station varchar(256) DEFAULT NULL,
+    weather_date date DEFAULT NULL,
+    max_temp int DEFAULT NULL,
+    min_temp int DEFAULT NULL,
+    precip int DEFAULT NULL
+);
+
+CREATE TABLE weather_stats (
+    weather_stats_id SERIAL PRIMARY KEY,
+    weather_station_stats varchar(256) DEFAULT NULL,
+    weather_year_stats int DEFAULT NULL,
+    avg_max_temp float DEFAULT NULL,
+    max_temp_count int DEFAULT NULL,
+    avg_min_temp float DEFAULT NULL,
+    min_temp_count int DEFAULT NULL,
+    total_accum_precip float DEFAULT NULL,
+    precip_count int DEFAULT NULL
+);
+
+CREATE TABLE record_stats (
+    records_id SERIAL PRIMARY KEY,
+    start_time timestamp,
+    end_time timestamp,
+    total_records int DEFAULT NULL
+);
+
+
+
+
+
+ 
